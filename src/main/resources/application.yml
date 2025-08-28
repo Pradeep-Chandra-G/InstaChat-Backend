@@ -1,17 +1,15 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:realchatapplication
-    driverClassName: org.h2.Driver
-    username: USERNAME
-    password: PASSWORD
+    url: jdbc:postgresql://localhost:5432/instachatdb
+    username: postgres
+    password: postgres
+
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
-  h2:
-    console:
-      enabled: true
+
 jwt:
   secret: FGW390@#7&Ounjkebu!#%%GHOPQasx&Q
   expiration: 3600000
